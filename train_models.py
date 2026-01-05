@@ -91,3 +91,12 @@ plt.xlabel("Actual Charges")
 plt.ylabel("Predicted Charges")
 plt.title("Actual vs Predicted Insurance Charges")
 plt.show()
+
+import pickle
+
+# Save the best model 
+with open("model.pkl", "wb") as f:
+    pickle.dump(rf_model, f)
+
+
+print("Model saved as model.pkl")
